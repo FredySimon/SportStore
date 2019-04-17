@@ -1,0 +1,42 @@
+#form label {
+    font-size: 200px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+    font-size: 30px;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+  .botonAgregar{
+    margin: 20px;
+	background-color:black;
+	color:White;
+}
+
+.botonLimpiar{
+    margin: 20px;
+    background-color: gray;
+}
+
+h3{
+  font-size: 25px;
+  color:gray;
+}

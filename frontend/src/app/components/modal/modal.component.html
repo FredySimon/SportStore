@@ -1,0 +1,98 @@
+<div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Detalle de factura</h5>
+        <button type="button" #btnClose class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="formaConfirmar">
+          <form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+              
+            <div class="form row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="name" #name= "ngModel" [(ngModel)]="userService.selectUser.name" placeholder="Nombre">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="surname" #surname= "ngModel" [(ngModel)]="userService.selectUser.surname" placeholder="Apellido">
+              </div>
+            </div>
+            
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" name="email" #email= "ngModel" [(ngModel)]="userService.selectUser.email" placeholder="Correo electronico alternativo">
+            </div>
+          
+            <div class="form-group">
+              <input type="text" class="form-control" name="cardNumber" #cardNumber= "ngModel" [(ngModel)]="userService.selectUser.cardNumber" placeholder="Numero de tarjeta">
+            </div>
+          
+            <div class="form row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="nit" #nit= "ngModel" [(ngModel)]="userService.selectUser.nit" placeholder="Nit">
+                  </div>
+                  <div class="form-group col-md-6">
+                      <input type="text" class="form-control" name="phoneNumber" #phoneNumber= "ngModel" [(ngModel)]="userService.selectUser.phoneNumber" placeholder="Numero de telefono">
+                  </div>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" class="form-control" name="direction" #direction= "ngModel" [(ngModel)]="userService.selectUser.direction" placeholder="Dirección">
+            </div>
+
+            <div class="form row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="producto" #producto= "ngModel" [(ngModel)]="userService.selectUser.producto" placeholder="Producto">
+                  </div>
+                  <div class="form-group col-md-6">
+                      <input type="text" class="form-control" name="precioUnitario" #precioUnitario= "ngModel" [(ngModel)]="userService.selectUser.precioUnitario" placeholder="Precio unitario">
+                  </div>
+            </div>
+
+            <div class="form row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="cantidad" #cantidad= "ngModel" [(ngModel)]="userService.selectUser.cantidad" placeholder="Cantidad" >
+                  </div>
+                  <div class="form-group col-md-6">
+                      <input type="text" class="form-control" name="precioTotal" #precioTotal= "ngModel" [(ngModel)]="userService.selectUser.precioTotal" placeholder="Precio total">
+                  </div>
+            </div>
+
+            <div class="form-group">
+                <h3>Comentario</h3>
+                <textarea class="form-control" name="comentario" #comentario= "ngModel" [(ngModel)]="userService.selectUser.comentario" placeholder="comentario"></textarea>
+              </div>
+          
+            <form>
+                <h2>Califica este producto:</h2>
+              <p class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                --><label for="radio1">★</label><!--
+                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                --><label for="radio2">★</label><!--
+                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                --><label for="radio3">★</label><!--
+                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                --><label for="radio4">★</label><!--
+                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                --><label for="radio5">★</label>
+              </p>
+            </form>
+          
+            <div class="form-group">
+                  <button class="btn botonAgregar" type="submit">
+                      <i class="fas fa-plus-circle"></i> Hecho
+                    </button>
+          
+              <button class="btn botonLimpiar" type="reset" (click)="resetForm(userForm)">
+                <i class="fas fa-sync-alt"></i>   Limpiar formulario
+              </button>
+            </div>
+          </form>
+        </form >
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,190 @@
+<!-- <h1>Ingresa a tu cuenta para poder comprar</h1>
+<form class="formaRegistar">
+  <div class="container">
+    <div class="card">
+      <div class="card-body" >
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+
+          <div class="form-group">
+            <input
+            type="text"
+            class="form-control"
+            name="name"
+            #name= "ngModel"
+            [(ngModel)]="userService.selectUser.name"
+            placeholder="Agrega tu nombre"
+            >
+          </div>
+
+          <div class="form-group">
+              <input
+              type="text"
+              class="form-control"
+              name="surname"
+              #surname= "ngModel"
+              [(ngModel)]="userService.selectUser.surname"
+              placeholder="Agrega tu apellido"
+              >
+            </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="email"
+              #email= "ngModel"
+              [(ngModel)]="userService.selectUser.email"
+              placeholder="Agrega tu correo electronico"
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              #password= "ngModel"
+              [(ngModel)]="userService.selectUser.password"
+              placeholder="Agrega tu contraseña"
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="nit"
+              #nit= "ngModel"
+              [(ngModel)]="userService.selectUser.nit"
+              placeholder="Agrega tu nit"
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="cardNumber"
+              #cardNumber= "ngModel"
+              [(ngModel)]="userService.selectUser.cardNumber"
+              placeholder="Agrega tu numero de tarjeta"
+            >
+          </div>
+
+          <div class="form-group">
+            <h5>Seleccionar imagen de perfil:</h5>
+            <input type="file" accept=".png, .jpg " (change)="onUpload($event)">
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success"
+            role="progressbar" [style.width]="(uploadPercent | async) + '%'">
+
+            </div>
+          </div>
+          <input #imageUser type="hidden" [value]="urlImage | async">
+
+          <div class="form-group">
+            <button href="/" *ngIf="urlImage | async; else btnDisabled" class="btn botonAgregar" type="submit">
+              <i class="fas fa-plus-circle"></i>    Agregar Usuario
+            </button>
+            <ng-template #btnDisabled>
+                <button class="btn botonAgregar" type="submit" disabled=true>
+                    <i class="fas fa-plus-circle"></i>    Agregar Usuario
+                  </button>
+            </ng-template>
+
+            <button class="btn botonLimpiar" type="reset" (click)="resetForm(userForm)">
+              <i class="fas fa-sync-alt"></i>   Limpiar formulario
+            </button>
+          </div>
+        
+
+      </form>
+    </div>
+  </div>
+</div>
+</form> -->
+
+
+<form class="formaR">
+      
+<section id="register" class="mb-5 mt-5">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-xs-12 col-sm-10 col-md-10 mx-auto">
+          <div class="card_register">
+            <div class="card">
+              <div class="card-body text-center">
+                <form #formRegister="ngForm" (ngSubmit)="onAddUser()">
+                  <h1 class="h3 mb-3 font-weight-normal">Registrar</h1>
+                  <div class="alert alert-danger" role="alert" *ngIf="isError">
+                    {{msgError}}
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Ingresa tu correo electronico" [(ngModel)]="email" required minlength="8">
+                  </div>
+                  <div class="alert alert-danger" role="alert" *ngIf="email.touched && !email.valid">
+                    <div *ngIf="email.errors.required">Email is required</div>
+                    <div *ngIf="email.errors.minlength">Email must be at least 8 characters</div>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" [(ngModel)]="password" required minlength="5"
+                      maxlength="10">
+                  </div>
+                  <div class="alert alert-danger" role="alert" *ngIf="password.touched && !password.valid">
+                    <div *ngIf="password.errors.required">Password is required</div>
+                    <div *ngIf="password.errors.minlength">Password must be at least 5 characters</div>
+                  </div>
+                  <hr>
+                  <h5>Selecciona tu foto de perfil:</h5>
+                  <div class="form-group" id="estilo">
+                    <i class="large material-icons">burst_mode</i>
+                    <input id="icono" type="file" accept=".png, .jpg" (change)="onUpload($event)">
+                  </div>
+                  <div class="progress">
+                    <div [style.visibility]="(uploadPercent == 0) ? 'hidden' : 'visible'" class="progress-bar progress-bar-striped bg-success"
+                      role="progressbar" [style.width]="(uploadPercent | async) +'%'">
+                    </div>
+                  </div>
+                  <br>
+
+                  <input #imageUser type="hidden" [value]="urlImage | async">
+                  <div class="form-group">
+            <button href="/" *ngIf="urlImage | async; else btnDisabled" class="btn botonAgregar" type="submit">
+              <i class="fas fa-plus-circle"></i>    Agregar Usuario
+            </button>
+            <ng-template #btnDisabled>
+                <button class="btn botonAgregar" type="submit" disabled=true>
+                    <i class="fas fa-plus-circle"></i>    Agregar Usuario
+                  </button>
+            </ng-template>
+
+            <button class="btn botonLimpiar" type="reset" (click)="resetForm(userForm)">
+              <i class="fas fa-sync-alt"></i>   Limpiar formulario
+            </button>
+          </div>
+
+                  <div class="form-group">
+                    <a routerLink="/user/ingresar" class="form-control login-user">¿Ya tienes una cuenta?</a>
+                  </div>
+                </form>
+
+                <div class="form-group">
+                    <button class="btn btn-block btn-social btn-facebook" (click)="onLoginFacebook()">
+                      <span class="fa fa-facebook"></span>- FACEBOOK</button>
+                    
+                     <button class="btn btn-block btn-social btn-google" (click)="onLoginGoogle()">
+                      <span class="fa fa-google"></span>- GOOGLE</button>  
+                  </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+
+

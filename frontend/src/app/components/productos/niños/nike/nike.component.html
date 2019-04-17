@@ -1,0 +1,143 @@
+<form class="formNikeNiños">
+  <p >Nike Niños</p>
+  <div class="divider"></div>
+  <div class="section">
+    <h5>Zapatos</h5></div>
+    <section id="books" class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let ninosNikeZapato of ninosNikeZapatos">
+            <div class="card_book">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="card-image">
+                    <img height="200" src="{{ninosNikeZapato.imagen}}">
+                    <br><br><br><br>
+                    <span class="card-title black">{{ninosNikeZapato.nombre}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light" routerLink="/carrito/{{ninosNikeZapato.id}}" *ngIf="isLogged"><i class="large material-icons">add_shopping_cart</i></a>
+                  </div>
+                  <div class="card-content">
+                    <h2>Precio: Q {{ninosNikeZapato.precio}}</h2>
+                    <h2>Talla: {{ninosNikeZapato.talla}} </h2>
+                    <h2>Existencia: 50</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div class="divider"></div>
+  <div class="section">
+  <h5>Playeras</h5></div>
+    <section id="books" class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let ninosNikePlayera of ninosNikePlayeras">
+            <div class="card_book">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="card-image">
+                    <img height="200" src="{{ninosNikePlayera.imagen}}">
+                    <br><br><br><br>
+                    <span class="card-title black">{{ninosNikePlayera.nombre}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light" routerLink="/carrito/{{ninosNikePlayera.id}}" *ngIf="isLogged"><i class="large material-icons">add_shopping_cart</i></a>
+                  </div>
+                  <div class="card-content">
+                    <h2>Precio: Q {{ninosNikePlayera.precio}}</h2>
+                    <h2>Talla: {{ninosNikePlayera.talla}} </h2>
+                    <h2>Existencia: 50</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div class="divider"></div>
+  <div class="section">
+  <h5>Pants</h5></div>
+    <section id="books" class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let ninosNikePant of ninosNikePants">
+            <div class="card_book">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="card-image">
+                    <img height="200" src="{{ninosNikePant.imagen}}">
+                    <br><br><br><br>
+                    <span class="card-title black">{{ninosNikePant.nombre}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light" routerLink="/carrito/{{ninosNikePant.id}}" *ngIf="isLogged"><i class="large material-icons">add_shopping_cart</i></a>
+                  </div>
+                  <div class="card-content">
+                    <h2>Precio: Q {{ninosNikePant.precio}}</h2>
+                    <h2>Talla: {{ninosNikePant.talla}} </h2>
+                    <h2>Existencia: 50</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div class="divider"></div>
+  <div class="section">
+  <h5>Pantalonetas</h5></div>
+    <section id="books" class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let ninosNikePantaloneta of ninosNikePantalonetas">
+            <div class="card_book">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="card-image">
+                    <img height="200" src="{{ninosNikePantaloneta.imagen}}">
+                    <br><br><br><br>
+                    <span class="card-title black">{{ninosNikePantaloneta.nombre}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light" routerLink="/carrito/{{ninosNikePantaloneta.id}}" *ngIf="isLogged"><i class="large material-icons">add_shopping_cart</i></a>
+                  </div>
+                  <div class="card-content">
+                    <h2>Precio: Q {{ninosNikePantaloneta.precio}}</h2>
+                    <h2>Talla: {{ninosNikePantaloneta.talla}} </h2>
+                    <h2>Existencia: 50</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div class="divider"></div>
+  <div class="section">
+  <h5>Chumpas</h5></div>
+    <section id="books" class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let ninosNikeChumpa of ninosNikeChumpas">
+            <div class="card_book">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="card-image">
+                    <img height="200" src="{{ninosNikeChumpa.imagen}}">
+                    <br><br><br><br>
+                    <span class="card-title black">{{ninosNikeChumpa.nombre}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light" routerLink="/carrito/{{ninosNikeChumpa.id}}" *ngIf="isLogged"><i class="large material-icons">add_shopping_cart</i></a>
+                  </div>
+                  <div class="card-content">
+                    <h2>Precio: Q {{ninosNikeChumpa.precio}}</h2>
+                    <h2>Talla: {{ninosNikeChumpa.talla}} </h2>
+                    <h2>Existencia: 50</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</form>

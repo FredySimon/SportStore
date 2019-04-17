@@ -1,0 +1,66 @@
+<br><br>
+<!-- <form class="formaLogin">
+    <body class="text-center">
+        <form class="form-signin">
+      <img class="mb-4" src="" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Inicie sesion en su cuenta</h1>
+      <label for="inputEmail" class="sr-only">Ingresa tu correo electronico</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Ingresa tu contraseña</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+         
+        </label>
+      </div>
+      <div class="form-group">
+          <a href="#" class="btn btn-block btn-social btn-facebook" (click)="onLoginFacebook()"
+          ><span class="fa fa-facebook"></span>    FACEBOOK</a>
+          <a href="#" class="btn btn-block btn-social btn-google" (click)=
+          "onLoginGoogle()"><span class="fa fa-google"></span>    GOOGLE</a>
+        </div>
+      <button class="btn btn-lg btn-block" type="submit">Sign in</button>
+      
+</form> -->
+
+<form class="formaLogin">
+    <section id="login" class="mb-10 mt-10">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-50 mx-auto">
+              <div class="card_login">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <form #formLogin="ngForm" (submit)="onLogin()">
+                      <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Ingresa a tu cuenta</h1>
+                      <h1><i class="large material-icons">account_circle</i></h1>
+                      <div class="alert alert-danger" role="alert" *ngIf="isError">
+                        Something is wrong!
+                      </div>
+                      <div class="form-group">
+                        <input [(ngModel)]="email" type="email" id="email" name="email" class="form-control" placeholder="Ingresa tu correo electronico" required>
+                      </div>
+                      <div class="form-group">
+                        <input [(ngModel)]="password" type="password" id="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" required>
+                      </div>
+                      <button type="submit" class="btn btn-lg btn-block botonIngresar">Ingresar</button>
+                      <br>
+
+                      <div class="form-group">
+                          <a routerLink="/user/registrar" class="form-control login-user">¿Eres nuevo?</a>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</form>
+
+
+
+
+ 

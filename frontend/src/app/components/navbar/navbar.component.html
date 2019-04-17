@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top blue ">
+<p class="titulo" routerLink="/">{{app_name}}</p>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="mainNavbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngIf="isLogged">
+        <a class="nav-link contactanos" routerLink="/contactanos">Contactanos
+        </a>
+      </li>
+      LOGGED: {{isLogged}}
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="tab nav-item" *ngIf="!isLogged">
+        <a class="nav-link registrar" routerLink="/user/registrar">Registar
+        </a>
+      </li>
+      <li class="tab nav-item" *ngIf="isLogged">
+        <a class="nav-link perfil" routerLink="/user/perfil">Perfil</a>
+      </li>
+      <li class="tab nav-item" *ngIf="!isLogged">
+        <a class="nav-link ingresar" routerLink="/user/ingresar">Ingresa a tu cuenta
+        </a>
+      </li>
+      <li class="tab nav-item" *ngIf="isLogged">
+        <a href="#" class="nav-link salir" (click)="onLogout()">Salir
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

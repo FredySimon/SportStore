@@ -1,0 +1,76 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
+        <br><br><br><br><br>
+      <mat-toolbar>Categorias</mat-toolbar>
+      <mat-nav-list class="list">
+        <a mat-list-item >Niños</a>
+          <ul>
+            <li><a routerLink="/niños/nike">Nike</a></li>
+            <li><a routerLink="/niños/adidas">Adidas</a></li>
+            <li><a routerLink="/niños/under">Under Armour</a></li>
+            <li><a routerLink="/niños/everlast">Everlast</a></li>
+            <li><a routerLink="/niños/puma">Puma</a></li>
+            <li><a routerLink="/niños/supra">Supra</a></li>
+            <li><a routerLink="/niños/umbro">Umbro</a></li>
+          </ul>
+        <a mat-list-item >Niñas</a>
+        <ul>
+            <li><a routerLink="/niñas/vans">Vans</a></li>
+            <li><a routerLink="/niñas/adidas">Adidas</a></li>
+            <li><a routerLink="/niñas/under">Under Armour</a></li>
+            <li><a routerLink="/niñas/everlast">Everlast</a></li>
+            <li><a routerLink="/niñas/nike">Nike</a></li>
+            <li><a routerLink="/niñas/champions">Champions</a></li>
+            <li><a routerLink="/niñas/puma">Puma</a></li>
+          </ul>
+        <a mat-list-item >Hombres</a>
+        <ul>
+            <li><a routerLink="/hombres/nike">Nike</a></li>
+            <li><a routerLink="/hombres/adidas">Adidas</a></li>
+            <li><a routerLink="/hombres/under">Under Armour</a></li>
+            <li><a routerLink="/hombres/everlast">Everlast</a></li>
+            <li><a routerLink="/hombres/puma">Puma</a></li>
+            <li><a routerLink="/hombres/supra">Supra</a></li>
+            <li><a routerLink="/hombres/umbro">Umbro</a></li>
+          </ul>
+  
+        <a mat-list-item >Mujeres</a>
+          <ul>
+            <li><a routerLink="/mujeres/vans">Vans</a></li>
+            <li><a routerLink="/mujeres/adidas">Adidas</a></li>
+            <li><a routerLink="/mujeres/under">Under Armour</a></li>
+            <li><a routerLink="/mujeres/everlast">Everlast</a></li>
+            <li><a routerLink="/mujeres/nike">Nike</a></li>
+            <li><a routerLink="/mujeres/champions">Champions</a></li>
+            <li><a routerLink="/mujeres/puma">Puma</a></li>
+          </ul>
+  
+          <a mat-list-item >Deportes</a>
+          <ul>
+            <li><a routerLink="/deportes/futbol">Futbol</a></li>
+            <li><a routerLink="/deportes/basketbol">Basketbol</a></li>
+            <li><a routerLink="/deportes/beisbol">Beisbol</a></li>
+            <li><a routerLink="/deportes/futA">Futbol Americano</a></li>
+            <li><a routerLink="/deportes/otros">Otros</a></li>
+          </ul>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span><a href="/">Inicio</a></span>
+       
+      </mat-toolbar>
+      <!-- Add Content Here -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>

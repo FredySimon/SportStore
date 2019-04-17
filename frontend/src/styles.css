@@ -1,0 +1,53 @@
+body {
+	background-image:url();
+	background-size:100% ;
+	background-attachment:fixed;
+	text-align:center;
+	color:black;
+	font-family: 'Baloo Chettan', cursive;
+}
+
+nav ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	overflow:auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+nav ul li a{
+	display:block;
+	color: rgb(34, 2, 92);
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+
+nav ul li{
+	float:left;	
+}
+
+nav ul li a:hover{
+	background-color:blue;
+}
+
+footer {
+	text-decoration:none;
+    margin-top:50px;
+    width:100%;
+    height:100px;
+    background-color:Black;
+    color:white;
+    text-align:center;	
+}
+
+.espaciado{
+	padding: 0px 0px 0px 200px;
+}
+
+
+
+
+

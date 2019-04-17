@@ -1,0 +1,28 @@
+<br><br>
+<form class="formaPerfil"> 
+    <section id="profile" class="container">
+        <div class="row mt-12">
+          <div class="col-lg-20 col-sm-20 col-12 main-section text-center card">
+            <div class="row">
+              <div class="col-lg-20 col-sm-20 col-12 profile-header"></div>
+            </div>
+            <div class="row user-details">
+              <div class="col-12">
+                <img src="{{user.photoUrl}}" class="rounded-circle img-thumbnail" alt="profile">
+                <h5 *ngIf="providerId != 'password'">{{user.name}}</h5>
+                <p>
+                  {{user.email}}
+                </p>
+      
+                <hr>
+                <span>Información de contacto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <li class="tab nav-item" routerLinkActive="active" *ngIf="isLogged"><a class="nav-link" (click)="onLogout()">Salir</a></li>
+</form>
+
+

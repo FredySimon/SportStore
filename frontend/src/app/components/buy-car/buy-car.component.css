@@ -1,0 +1,57 @@
+tr:hover td{
+	background-color: rgb(68, 65, 235);
+	color: black;
+}
+
+.formaInicio{
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 auto;
+	width: 600px;
+	background-color: black;
+}
+
+body {
+	background-image:url(https://previews.123rf.com/images/dolva/dolva1505/dolva150500003/40606767-radial-comic-l%C3%ADneas-de-velocidad-de-fondo.jpg);
+	background-size:100% ;
+	background-attachment:fixed;
+	text-align:center;
+	color:Black;
+	padding:20px;
+	margin:20px;
+	font-family:Indie Flower;
+}
+
+.formaCarrito{
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 auto;
+	width: 1000px;
+	background-color: black;
+	align-content: center;
+} 
+
+.formaConfirmar{
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 auto;
+	width: 800px;
+	background-color: black;
+	align-content: center;
+} 
+
+.botonAgregar{
+    margin: 20px;
+	background-color:black;
+	color:White;
+}
+
+.botonLimpiar{
+    margin: 20px;
+    background-color: gray;
+}
+
+h6{
+	font-size: 50px;
+}
+

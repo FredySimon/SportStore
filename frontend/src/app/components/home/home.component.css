@@ -1,0 +1,44 @@
+.formaSlide{
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 auto;
+    width: 1010px;
+    height: 580px;
+	background-color: black;
+	align-content: center;
+} 
+.container-slider{
+    position: relative  ;
+    width: 990px;
+    height: 530px;
+    overflow: hidden;
+    border: 10px solid #FFF;
+}
+
+.container-slider .slider{
+    position: relative;
+    width: 400%;
+    height: 100%;
+    display:flex;
+    animation: moverse 10s infinite linear;
+}
+
+.container-slider .slider li{
+    position:relative;
+    width: 100%;
+    list-style: none;
+
+}
+
+.container-slider .slider li img{
+    position:relative;
+    width: 990px;
+    height: 100%;
+}
+
+@keyframes moverse{
+    0%,20%{margin-left: 0px;}
+    25%,45%{margin-left: -100%;}
+    50%,70%{margin-left: -200%;}
+    75%,100%{margin-left: -300%;}
+}

@@ -1,0 +1,85 @@
+<form class="formaCarrito">
+    <div class="container">
+      <div class="card">
+        <div class="card-body" >
+          <form>
+            <h6>Carrito de compras</h6>
+              <table class="table table-hover table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Foto</th>
+                      <th scope="col">Producto</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col">Talla</th>
+                      <th scope="col">Cantidad</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+  
+                    <tr>
+                      <th scope="row">1</th>
+                      <td><div class="media mt-3"><a class="mr-3"><img width="50" src="{{ninosNikeZapato.imagen}}" class="mr-3"></a></div></td>
+                      <td><h2>{{ninosNikeZapato.nombre}}</h2></td>
+                      <td><h2>{{ninosNikeZapato.precio}}</h2></td>
+                      <td><h2>{{ninosNikeZapato.talla}}</h2></td>
+                      <td><input type="number" name="cantidadZapato" max="31" min="1" value="1" step="1"></td>
+                    </tr>
+  
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><div class="media mt-3"><a class="mr-3"><img width="50" src="{{ninosNikePlayera.imagen}}" class="mr-3"></a></div></td>
+                        <td><h2>{{ninosNikePlayera.nombre}}</h2></td>
+                        <td><h2>{{ninosNikePlayera.precio}}</h2></td>
+                        <td><h2>{{ninosNikePlayera.talla}}</h2></td>
+                        <td><input type="number" max="31" min="1" value="1" step="1"></td>
+                      </tr>
+  
+                      <tr>
+                          <th scope="row">3</th>
+                          <td><div class="media mt-3"><a class="mr-3"><img width="50" src="{{ninosNikePant.imagen}}" class="mr-3"></a></div></td>
+                          <td><h2>{{ninosNikePant.nombre}}</h2></td>
+                          <td><h2>{{ninosNikePant.precio}}</h2></td>
+                          <td><h2>{{ninosNikePant.talla}}</h2></td>
+                          <td><input type="number" max="31" min="1" value="1" step="1"></td>
+                        </tr>
+  
+                        <tr>
+                            <th scope="row">4</th>
+                            <td><div class="media mt-3"><a class="mr-3"><img width="50" src="{{ninosNikePantaloneta.imagen}}" class="mr-3"></a></div></td>
+                            <td><h2>{{ninosNikePantaloneta.nombre}}</h2></td>
+                            <td><h2 >{{ninosNikePantaloneta.precio}}</h2></td>
+                            <td><h2>{{ninosNikePantaloneta.talla}}</h2></td>
+                            <td><input id="cantidad" type="number" max="31" min="1" value="1" step="1"></td>
+                          </tr>
+  
+                          <tr>
+                              <th scope="row">5</th>
+                              <td><div class="media mt-3"><a class="mr-3"><img width="50" src="{{ninosNikeChumpa.imagen}}" class="mr-3"></a></div></td>
+                              <td><h2>{{ninosNikeChumpa.nombre}}</h2></td>
+                              <td><h2>{{ninosNikeChumpa.precio}}</h2></td>
+                              <td><h2>{{ninosNikeChumpa.talla}}</h2></td>
+                              <td><input type="number" max="50" min="1" value="" step="1"></td>
+                            </tr>
+  
+                    <tr>  
+                      <td></td>
+                      <th><a class="btn btn-dark btn-lg active" role="button" aria-pressed="true" ng-Clik="ShowForm()" data-toggle="modal" data-target="#modalConfirmar" >Confirmar compra</a></th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><input type="text"><td>
+                    </tr>
+  
+                  </tbody>
+                </table>
+                
+          </form>
+      </div>
+    </div>
+  </div>
+  </form> 
+
+
+   <app-modal></app-modal>
